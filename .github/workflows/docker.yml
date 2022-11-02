@@ -22,4 +22,4 @@ jobs:
       run: |
         docker push bhliv1691/al-app:latest
         docker push bhliv1691/al-db-loader:latest
-        docker push bhliv1691/email:latest
+        docker push bhliv1691/al-email:latest
