@@ -23,3 +23,15 @@ jobs:
         docker push bhliv1691/al-app:latest
         docker push bhliv1691/al-db-loader:latest
         docker push bhliv1691/al-email:latest
+  deploy:
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: '**PLACEHOLDER** Deploy to Kubernetes'
+      run: echo Placeholder for Deployment
+    - name: run containers
+      run: |
+        docker run -d bhliv1691/al-app:latest
+        docker run -d bhliv1691/al-db-loader:latest
+        docker run -d bhliv1691/al-email:latest
